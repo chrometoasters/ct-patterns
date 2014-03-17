@@ -2,6 +2,8 @@
 
 *As used @ <http://outwardbound.co.nz>. Note that the engagement bar code has been stripped as this is not related to the demo.*
 
+Demo: <http://chrometoasters.github.io/ct-patterns/mobile-nav/outwardbound/index.html>
+
 ## By default, when media queries are supported but JavaScript is not available:
 
 1. The 'real' primary nav at the top of the page is hidden off-canvas, except for a toggle control which is displayed. Clicking the toggle control jumps the user down to the primary nav clone in the footer.
