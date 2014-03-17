@@ -1,4 +1,4 @@
 Patterns
 ===========
 
-This repository is a place to document common patterns. These are reused across projects, though the fine details may differ.
+This repository is a place to document common patterns. These are reused across projects, though the details may differ.
