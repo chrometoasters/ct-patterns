@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <title>Nav Pattern</title>
+        <meta charset="utf-8" />
+        <!-- render using the latest IE rendering engine -->
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <!-- don't zoom layout, use scroll bars if too wide and blank space if too narrow -->
+        <meta name="viewport" id="viewport" content="initial-scale=1.0" />
+        <!--[if lt IE 9]>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv-printshiv.js"></script>
+        <![endif]-->
+        <!-- Styles -->
+        <link rel="stylesheet" href="http://outwardbound.dan.192.168.0.145.xip.io/wp-content/themes/outwardbound2014/resources/build/styles/screen.blessed.css" />
+    </head>
+    <body class="page-demo">
+
+        <div id="shell-wrapper">
+            <div id="shell">
+
+                <nav class="m-primary-nav_desktop">
+                    <div class="m-primary-nav--liner" id="primary-nav">
+                        <div class="m-form_search" id="m-form_search">
+                            <form action="/path/to/searchresults">
+                                <fieldset>
+                                    <legend>
+                                        <span>Search the site</span>
+                                    </legend>
+                                    <div class="l-form-search l-custom">
+                                        <div class="col"></div>
+                                        <div class="col">
+                                            <label for="m-form_search--query">Search for:</label>
+                                            <input type="text" placeholder="Search" id="m-form_search--query" name="s" autocomplete="off" data-provide="typeahead" />
+                                        </div>
+                                        <div class="col">
+                                            <button type="submit">
+                                                <span>Submit</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <ul class="l-custom">
+                            <li class="col home">
+                                <a href="/">
+                                    <span>Home</span>
+                                </a>
+                            </li>
+                            <li class="col">
+                                <a href="/url">
+                                    <span>A1</span>
+                                </a>
+                            </li>
+                            <li class="col active">
+                                <a href="/url">
+                                    <span>A2 (active)</span>
+                                </a>
+                            </li>
+                           <li class="col">
+                                <a href="/url">
+                                    <span>A3</span>
+                                </a>
+                            </li>
+                           <li class="col">
+                                <a href="/url">
+                                    <span>A4</span>
+                                </a>
+                            </li>
+                           <li class="col">
+                                <a href="/url">
+                                    <span>A5</span>
+                                </a>
+                            </li>
+                            <li class="col search">
+                                <a href="/path/to/searchresults" aria-controls="m-form_search">
+                                    <span>Search</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <p class="toggle_primary_nav m-primary-nav--item l-hide-tablet">
+                            <a href="#m-primary-nav_mobile_noscript" id="m-primary-nav--control">
+                                <span>Jump to main navigation</span>
+                            </a>
+                        </p>
+                    </div>
+                </nav>
+                <!-- /.m-primary-nav_desktop -->
+
+                <div class="block-secondary-nav">
+                    <ul class="l-main-wide">
+                        <li>
+                            <a href="/url">B1</a>
+                        </li>
+                        <li>
+                            <a href="/url">B2</a>
+                        </li>
+                        <li>
+                            <a href="/url">B3</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.block-secondary-nav -->
+
+                <p>Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content </p>
+
+                <nav class="m-primary-nav_mobile_noscript l-hide-tablet" id="m-primary-nav_mobile_noscript">
+                    <div class="m-primary-nav--liner" id="primary-nav">
+                        <ul>
+                            <li class="col primary-nav--item home">
+                                <a href="/">
+                                    <span>Home</span>
+                                </a>
+                            </li>
+                            <li class="col primary-nav--item">
+                                <a href="/url">
+                                    <span>A1 clone</span>
+                                </a>
+                            </li>
+                            <li class="col primary-nav--item active">
+                                <a href="/url">
+                                    <span>A2 (active) clone</span>
+                                </a>
+                            </li>
+                            <li class="col primary-nav--item">
+                                <a href="/url">
+                                    <span>A3 clone</span>
+                                </a>
+                            </li>
+                            <li class="col primary-nav--item">
+                                <a href="/url">
+                                    <span>A4 clone</span>
+                                </a>
+                            </li>
+                                <li class="col primary-nav--item">
+                                <a href="/url">
+                                    <span>A5 clone</span>
+                                </a>
+                            </li>
+                            <li class="col primary-nav--item search">
+                                <a href="/path/to/searchresults" aria-controls="m-form_search">
+                                    <span>Search</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- /.m-primary-nav_mobile_noscript -->
+
+            </div>
+            <!-- /#shell -->
+
+        </div>
+        <!-- /#shell-wrapper -->
+
+        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+        <script src="vendor/enquire.js/enquire.js"></script>
+        <script src="pattern.js"></script>
+    </body>
+</html>
