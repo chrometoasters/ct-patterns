@@ -4,6 +4,8 @@
 
 Demo: <http://chrometoasters.github.io/ct-patterns/tree/inclusive-education/index.html>
 
+__Please note: this pattern is optimised for internal Chrometoaster use. YMMV.__
+
 ## By default, when JavaScript is not available
 
 * All blocks are expanded.

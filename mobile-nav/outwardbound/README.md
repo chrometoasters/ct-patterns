@@ -4,6 +4,8 @@
 
 Demo: <http://chrometoasters.github.io/ct-patterns/mobile-nav/outwardbound/index.html>
 
+__Please note: this pattern is optimised for internal Chrometoaster use. YMMV.__
+
 ## By default, when media queries are supported but JavaScript is not available:
 
 1. The 'real' primary nav at the top of the page is hidden off-canvas, except for a toggle control which is displayed. Clicking the toggle control jumps the user down to the primary nav clone in the footer.
