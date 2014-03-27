@@ -32,15 +32,6 @@ var ct_pattern = null; // global for console debugging
                 // open block if closed
                 if ( $aria_block.attr('aria-expanded') === 'false' ) {
                     $aria_block.attr('aria-expanded', 'true');
-
-                    // fix width of tabbed box
-                    var $rs = $aria_block.find('.royalSlider');
-                    if ( $rs.data('royalSlider') ) {
-                        $rs.data('royalSlider').updateSliderSize(true);
-                    }
-
-                    var $rsTabs = $rs.find('.rsTab');
-                    $rsTabs.match_heights();
                 }
                 // close block if open
                 else {
