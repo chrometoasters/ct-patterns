@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <title>Tree Pattern</title>
+        <meta charset="utf-8" />
+        <!-- render using the latest IE rendering engine -->
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--[if lt IE 9]>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv-printshiv.js"></script>
+        <![endif]-->
+        <!-- Styles -->
+        <link rel="stylesheet" href="http://build.192.168.0.145.xip.io/themes/branzbuild/resources/css/build.min.css" />
+        <link rel="stylesheet" href="http://build.192.168.0.145.xip.io/themes/branzbuild/resources/css/build-responsive.min.css" />
+        <style>
+            [role="treeitem"][aria-expanded="false"] > [role="group"] {
+                display: none;
+            }
+
+            [role="treeitem"][aria-expanded="true"] > [role="group"] {
+                display: block;
+            }
+
+            [aria-hidden="true"] {
+                display: none !important;
+            }
+
+            a.m-tree--expander {
+                text-decoration: none;
+                color: #08c;
+            }
+        </style>
+    </head>
+    <body class="page-demo">
+
+        <div class="build-wrapper-content">
+            <div class="container">
+
+                <div class="row build-content">
+                    <div class="span7">
+                        <!-- @import "build-block-results-full.kit" -->
+                    </div>
+                    <!-- /.span7 -->
+                    <div class="span4 offset1">
+
+                        <section class="build-block-refine">
+                            <header>
+                                <h2 class="build-heading">Refine your search</h2>
+                            </header>
+                            <section>
+                                <header>
+                                    <h3 class="build-heading">
+                                        Primary topic
+                                        <span class="build-count">(203)</span>
+                                    </h3>
+                                </header>
+                                <!-- Note: The unordered list is optional. -->
+                                <ul class="unstyled m-tree" role="tree">
+                                    <li role="treeitem">
+                                        <a href="/url">
+                                            Secondary topic
+                                            <span class="build-count">(32)</span>
+                                        </a>
+                                    </li>
+                                    <li role="treeitem" aria-expanded="true">
+                                        <a href="#anchor_l2_content_1" class="m-tree--expander">
+                                            <i class="icon icon-minus-sign-alt"></i>
+                                            <span class="build-hidden">Collapse block</span>
+                                        </a>
+                                        <a href="/url">
+                                            Secondary topic
+                                            <span class="build-count">(102)</span>
+                                        </a>
+                                        <div role="group">
+                                            <ul class="m-tree--l2" id="anchor_l2_content_1" role="treeitem">
+                                                <li role="treeitem">
+                                                    <a href="/url">
+                                                        Tertiary topic
+                                                        <span class="build-count">(42)</span>
+                                                    </a>
+                                                </li>
+                                                <li role="treeitem">
+                                                    <a href="/url">
+                                                        Tertiary topic
+                                                        <span class="build-count">(42)</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li role="treeitem">
+                                        <a href="/url">
+                                            Secondary topic
+                                            <span class="build-count">(30)</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <!-- /.unstyled -->
+                            </section>
+                        </section>
+                        <!-- /.build-block-refine -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+        <script src="pattern.js"></script>
+    </body>
+</html>

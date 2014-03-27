@@ -2,7 +2,7 @@
 
 *As used @ [coming soon].*
 
-Demo: <http://chrometoasters.github.io/ct-patterns/tree/inclusive-education/index.html>
+Demo: <http://chrometoasters.github.io/ct-patterns/tree/branz-build/index.html>
 
 __Please note: this pattern is optimised for internal Chrometoaster use. YMMV.__
 
