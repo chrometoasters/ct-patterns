@@ -66,6 +66,6 @@ var ct_pattern = null; // global for console debugging
 
     };
 
-    ct_pattern.setup_aria_tree('.m-tree--expander'); // [role="tree-item"][aria-expanded] > div > a
+    ct_pattern.setup_aria_tree('[role="tree"] .m-tree--expander');
 
 })(jQuery);
