@@ -34,6 +34,11 @@
                 text-decoration: none;
                 color: #08c;
             }
+
+            /* this allows a hidden icon to be included to create a matching indent */
+            .m-tree--static {
+                visibility: hidden;
+            }
         </style>
     </head>
     <body class="page-demo">
@@ -62,14 +67,17 @@
                                 <!-- Note: The unordered list is optional. -->
                                 <ul class="unstyled m-tree" role="tree">
                                     <li role="treeitem">
+                                        <span class="m-tree--static">
+                                            <i class="icon icon-minus-sign-alt"></i>
+                                        </span>
                                         <a href="/url">
                                             Secondary topic
                                             <span class="build-count">(32)</span>
                                         </a>
                                     </li>
                                     <li role="treeitem" aria-expanded="true">
-                                        <a href="#anchor_l2_content_1" class="m-tree--expander">
-                                            <i class="icon icon-minus-sign-alt"></i>
+                                        <a href="#anchor_l2_content_1" class="m-tree--expander" aria-controls="anchor_l2_content_1">
+                                            <i class="icon icon-minus"></i>
                                             <span class="build-hidden">Collapse block</span>
                                         </a>
                                         <a href="/url">
@@ -94,6 +102,9 @@
                                         </div>
                                     </li>
                                     <li role="treeitem">
+                                        <span class="m-tree--static">
+                                            <i class="icon icon-minus-sign-alt"></i>
+                                        </span>
                                         <a href="/url">
                                             Secondary topic
                                             <span class="build-count">(30)</span>

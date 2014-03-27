@@ -30,12 +30,12 @@ var ct_pattern = null; // global for console debugging
                 // open block if closed
                 if ( $aria_block.attr('aria-expanded') === 'false' ) {
                     $aria_block.attr('aria-expanded', 'true');
-                    $aria_expander.find('.icon').removeClass('icon-plus-sign-alt').addClass('icon-minus-sign-alt');
+                    $aria_expander.find('.icon').removeClass('icon-plus').addClass('icon-minus');
                 }
                 // close block if open
                 else {
                     $aria_block.attr('aria-expanded', 'false');
-                    $aria_expander.find('.icon').removeClass('icon-minus-sign-alt').addClass('icon-plus-sign-alt');
+                    $aria_expander.find('.icon').removeClass('icon-minus').addClass('icon-plus');
                 }
             });
 
@@ -47,7 +47,7 @@ var ct_pattern = null; // global for console debugging
 
             // close block if open
             $expanded.attr('aria-expanded', 'false');
-            $expanded.find('.m-tree--expander').find('.icon').removeClass('icon-minus-sign-alt').addClass('icon-plus-sign-alt');
+            $expanded.find('.m-tree--expander').find('.icon').removeClass('icon-minus').addClass('icon-plus');
 
             // .m-tree--l1 is always present,
             // by default it appears expanded, to show the contained group,
