@@ -1,0 +1,13 @@
+[aria-hidden="true"] {
+    display: none !important;
+}
+
+a.m-tree--expander {
+    text-decoration: none;
+    color: #08c;
+}
+
+/* this allows a hidden icon to be included to create a matching indent */
+.m-tree--static {
+    visibility: hidden;
+}

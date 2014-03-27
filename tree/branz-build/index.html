@@ -17,29 +17,7 @@
         <!-- Styles -->
         <link rel="stylesheet" href="http://build.192.168.0.145.xip.io/themes/branzbuild/resources/css/build.min.css" />
         <link rel="stylesheet" href="http://build.192.168.0.145.xip.io/themes/branzbuild/resources/css/build-responsive.min.css" />
-        <style>
-            [role="treeitem"][aria-expanded="false"] > [role="group"] {
-                display: none;
-            }
-
-            [role="treeitem"][aria-expanded="true"] > [role="group"] {
-                display: block;
-            }
-
-            [aria-hidden="true"] {
-                display: none !important;
-            }
-
-            a.m-tree--expander {
-                text-decoration: none;
-                color: #08c;
-            }
-
-            /* this allows a hidden icon to be included to create a matching indent */
-            .m-tree--static {
-                visibility: hidden;
-            }
-        </style>
+        <link rel="stylesheet" href="pattern.css" />
     </head>
     <body class="page-demo">
 
@@ -53,7 +31,7 @@
                     <!-- /.span7 -->
                     <div class="span4 offset1">
 
-                        <section class="build-block-refine">
+                        <section class="build-block-refine" aria-role="application">
                             <header>
                                 <h2 class="build-heading">Refine your search</h2>
                             </header>
@@ -75,8 +53,8 @@
                                             <span class="build-count">(32)</span>
                                         </a>
                                     </li>
-                                    <li role="treeitem" aria-expanded="true">
-                                        <a href="#anchor_l2_content_1" class="m-tree--expander" aria-controls="anchor_l2_content_1">
+                                    <li role="treeitem" aria-expanded="true" id="anchor_l2_content_1_parent">
+                                        <a href="#anchor_l2_content_1" class="m-tree--expander" aria-controls="anchor_l2_content_1 anchor_l2_content_1_parent">
                                             <i class="icon icon-minus"></i>
                                             <span class="build-hidden">Collapse block</span>
                                         </a>
@@ -84,8 +62,8 @@
                                             Secondary topic
                                             <span class="build-count">(102)</span>
                                         </a>
-                                        <div role="group">
-                                            <ul class="m-tree--l2" id="anchor_l2_content_1" role="treeitem">
+                                        <div role="group" aria-hidden="false" id="anchor_l2_content_1">
+                                            <ul class="m-tree--l2" role="treeitem">
                                                 <li role="treeitem">
                                                     <a href="/url">
                                                         Tertiary topic

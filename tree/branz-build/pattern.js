@@ -11,61 +11,61 @@ var ct_pattern = null; // global for console debugging
 
     ct_pattern = {
 
-        // TODO: refactor to match aria-hidden controller
-        setup_expand_buttons: function(selector) {
+        setup_aria_tree: function(selector) {
 
-            // hook up expanded buttons:
+            var $aria_controllers = $(selector + '[aria-controls]');
 
-            var $aria_expanders = $(selector);
-
-            $aria_expanders.on( 'click', function(e) {
+            $aria_controllers.on( 'click', function(e) {
 
                 // don't follow link href
                 e.preventDefault();
 
-                var $aria_expander = $(this);
+                var $aria_controller = $(this);
+                var $aria_controller_icon = $aria_controller.children('.icon');
+                var $aria_controlled = $(this).attr('aria-controls').split(' '); // space separated list of IDs, pointing to expandable and hidable containers
+                var $aria_expandee = false;
+                var $aria_hidee = false;
+                var $target = false;
 
-                var $aria_block = $aria_expander.parents('[aria-expanded]').eq(0);
+                $.each( $aria_controlled, function(i, item) {
+
+                    $target = $('#' + item);
+
+                    if ( $target.is('[role="treeitem"][aria-expanded]') ) {
+                        $aria_expandee = $target;
+                    }
+                    else if ( $target.is('[role="group"][aria-hidden]') ) {
+                        $aria_hidee = $target;
+                    }
+
+                    //console.log( i, $aria_expandee, $aria_hidee );
+                });
 
                 // open block if closed
-                if ( $aria_block.attr('aria-expanded') === 'false' ) {
-                    $aria_block.attr('aria-expanded', 'true');
-                    $aria_expander.find('.icon').removeClass('icon-plus').addClass('icon-minus');
+                if ( $aria_expandee && $aria_expandee.attr('aria-expanded') === 'false' ) {
+
+                    $aria_expandee.attr('aria-expanded', 'true');
+                    $aria_controller_icon.removeClass('icon-plus').addClass('icon-minus');
+                    $aria_hidee.attr('aria-hidden', 'false');
+
                 }
                 // close block if open
-                else {
-                    $aria_block.attr('aria-expanded', 'false');
-                    $aria_expander.find('.icon').removeClass('icon-minus').addClass('icon-plus');
+                else if ( $aria_expandee && $aria_expandee.attr('aria-expanded') === 'true' ) {
+
+                    $aria_expandee.attr('aria-expanded', 'false');
+                    $aria_controller_icon.removeClass('icon-minus').addClass('icon-plus');
+                    $aria_hidee.attr('aria-hidden', 'true');
+
                 }
             });
 
-        },
+            // trigger a clicks to collapse the target
+            $aria_controllers.trigger('click');
 
-        collapse_expandable_containers: function() {
-
-            var $expanded = $('[aria-expanded="true"]');
-
-            // close block if open
-            $expanded.attr('aria-expanded', 'false');
-            $expanded.find('.m-tree--expander').find('.icon').removeClass('icon-minus').addClass('icon-plus');
-
-            // .m-tree--l1 is always present,
-            // by default it appears expanded, to show the contained group,
-            // when js is enabled it appears collapsed, to save space
-
-            // .m-tree--l2 is always present,
-            // by default it appears expanded, to show the contained .m-tree--l2-group (except the tabbed multimedia content)
-            // when js is enabled it appears collapsed, to save space
-
-            // .m-tree--l2-group is always present,
-            // by default it appears expanded, to show each contained .m-tree--l3
-            // when js is enabled it appears collapsed, to save space
-            // when js is enabled, the multimedia content is Ajaxed in when the block is expanded for the first time
-        },
+        }
 
     };
 
-    ct_pattern.collapse_expandable_containers();
-    ct_pattern.setup_expand_buttons('.m-tree--expander'); // [role="tree-item"][aria-expanded] > div > a
+    ct_pattern.setup_aria_tree('.m-tree--expander'); // [role="tree-item"][aria-expanded] > div > a
 
 })(jQuery);

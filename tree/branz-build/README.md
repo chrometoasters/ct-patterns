@@ -1,4 +1,4 @@
-# Patterns: Tree navigation
+# Patterns: Tree navigation 0.2
 
 *As used @ [coming soon].*
 
@@ -8,14 +8,16 @@ __Please note: this pattern is optimised for internal Chrometoaster use. YMMV.__
 
 ## By default, when JavaScript is not available
 
-* Each expander is anchor-linked to a block with `role="treeitem"`. The expander's parent has `aria-expanded="true"`, which causes the nested block with `role="group"` to be visible.
-* Clicking the expander jumps the page down to the top of the anchor-linked block.
+* Each expander:
+    1. `aria-controls` a parent block with `[role="treeitem"][expanded="true"]`.
+    1. `aria-controls` a sibling block with `[role="group"][aria-hidden="false"]`.
+    1. anchor links to a sibling block with `[role="group"][aria-hidden="false"]`. Clicking the expander jumps the page down to the top of the anchor-linked block.
 
 ## When JavaScript is available
 
-* Each expander is anchor-linked to a block with `role="treeitem"`. The expander's parent has `aria-expanded="false"`,  which causes the nested block with `role="group"` to be hidden.
-* Clicking the expander changes the expander's parent to `aria-expanded="true"`, which causes the nested block with `role="group"` to become visible. The page does not jump.
-
+* Each expander:
+    1. `aria-controls` a parent block with `[role="treeitem"][expanded="false"]`. Clicking the expander expands the block via `[aria-expanded="true"]`.
+    1. `aria-controls` a sibling block with `[role="group"][aria-hidden="true"]`. Clicking the expander displays the block via `[aria-hidden="false"]`.
 
 
 

@@ -1,4 +1,4 @@
-# Patterns: Tree navigation
+# Patterns: Tree navigation 0.1
 
 *As used @ [coming soon].*
 

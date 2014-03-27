@@ -16,9 +16,9 @@
         <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv-printshiv.js"></script>
         <![endif]-->
         <!-- Styles -->
-        <link rel="stylesheet" href="http://inclusive.dan.tki.org.nz/resources/build/styles/screen.blessed.css" />
+        <link rel="stylesheet" href="http://inclusive.dan.tki.org.nz.192.168.0.145.xip.io/resources/build/styles/screen.blessed.css" />
     </head>
-    <body class="page-demo">
+    <body class="page-demo" aria-role="application">
         <section class="m-tree l-12_internal-strategy" role="tree">
             <h2 class="lc-12-12">Tree level 1 header</h2>
             <!-- /.lc-12-12 -->
@@ -28,7 +28,7 @@
             <!-- /.t-intro -->
             <section class="m-tree--l1 lc-12-12" role="treeitem" aria-expanded="true">
                 <header class="m-tree--l1-header">
-                    <a href="#anchor_l2_set_1" class="m-tree--expander">
+                    <a href="#anchor_l2_set_1" class="m-tree--expander" aria-controls="anchor_l2_set_1">
                         <h3 class="m-tree--l1-heading heading">
                             <i class="fa fa-play"></i>
                             Tree level 2 header (expander)
@@ -40,7 +40,7 @@
                     <div class="m-tree--l2-set" role="group">
                         <div class="m-tree--l2" role="treeitem" aria-expanded="true" id="strategy_1_suggestion_0">
                             <div class="m-tree--l2-header l-12_tree-header">
-                                <a href="#anchor_l2_content_1" class="lc-9-12 m-tree--expander">
+                                <a href="#anchor_l2_content_1" class="lc-9-12 m-tree--expander" aria-controls="anchor_l2_content_1">
                                     <h4 class="m-tree--l2-heading heading">
                                         <i class="fa fa-play"></i>
                                         Tree level 2 sub-header (expander)
@@ -68,7 +68,7 @@
                                     <div role="group">
                                         <section class="m-tree--l3" role="treeitem" aria-expanded="true">
                                             <header class="m-tree--l3-header">
-                                                <a href="#anchor_l3_content_1" class="m-tree--expander">
+                                                <a href="#anchor_l3_content_1" class="m-tree--expander" aria-controls="anchor_l3_content_1">
                                                     <h4 class="m-tree--l3-heading">
                                                         <i class="fa fa-play"></i>
                                                         Tree level 3 sub-header
@@ -95,7 +95,7 @@
                         <!-- /.m-tree-l2-association -->
                         <div class="m-tree--l2" role="treeitem" aria-expanded="true">
                             <div class="m-tree--l2-header l-12_tree-header">
-                                <a href="#anchor_l3_content_2" class="lc-9-12 m-tree--expander">
+                                <a href="#anchor_l3_content_2" class="lc-9-12 m-tree--expander" aria-controls="anchor_l3_content_2">
                                     <h4 class="m-tree--l2-heading heading">
                                         <i class="fa fa-play"></i>
                                         Tree level 2 sub-header (expander)
@@ -118,7 +118,7 @@
                     <!-- /.m-tree-l2-set -->
                     <div class="m-tree--l2" role="treeitem" aria-expanded="true">
                         <div class="m-tree--l2-header l-12_tree-header">
-                            <a href="#anchor_l3_content_3" class="lc-9-12 m-tree--expander">
+                            <a href="#anchor_l3_content_3" class="lc-9-12 m-tree--expander" aria-controls="anchor_l3_content_3">
                                 <h4 class="m-tree--l2-heading heading">
                                     <i class="fa fa-play"></i>
                                     Tree level 2 sub-header (expander)
