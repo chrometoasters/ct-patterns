@@ -1,0 +1,76 @@
+// VALIDATION SETTINGS FOR JSHINT.COM
+
+// This file
+/*jshint browser:true, jquery:true, strict:true, devel:false */
+// Vendor
+/*globals enquire:true */
+
+var ct_pattern = null; // global for console debugging
+
+(function($) {
+
+    "use strict"; // JSHINT - Use ECMAScript 5 Strict Mode
+
+    ct_pattern = {
+
+        // TODO: refactor to match aria-hidden controller
+        setup_expand_buttons: function(selector) {
+
+            // hook up expanded buttons:
+
+            var $aria_expanders = $(selector);
+
+            $aria_expanders.on( 'click', function(e) {
+
+                // don't follow link href
+                e.preventDefault();
+
+                var $aria_expander = $(this);
+
+                var $aria_block = $aria_expander.parents('[aria-expanded]').eq(0);
+
+                // open block if closed
+                if ( $aria_block.attr('aria-expanded') === 'false' ) {
+                    $aria_block.attr('aria-expanded', 'true');
+
+                    // fix width of tabbed box
+                    var $rs = $aria_block.find('.royalSlider');
+                    if ( $rs.data('royalSlider') ) {
+                        $rs.data('royalSlider').updateSliderSize(true);
+                    }
+
+                    var $rsTabs = $rs.find('.rsTab');
+                    $rsTabs.match_heights();
+                }
+                // close block if open
+                else {
+                    $aria_block.attr('aria-expanded', 'false');
+                }
+            });
+
+        },
+
+        collapse_expandable_containers: function() {
+
+            $('[aria-expanded="true"]').attr('aria-expanded', 'false');
+
+            // .m-tree--l1 is always present,
+            // by default it appears expanded, to show the contained group,
+            // when js is enabled it appears collapsed, to save space
+
+            // .m-tree--l2 is always present,
+            // by default it appears expanded, to show the contained .m-tree--l2-group (except the tabbed multimedia content)
+            // when js is enabled it appears collapsed, to save space
+
+            // .m-tree--l2-group is always present,
+            // by default it appears expanded, to show each contained .m-tree--l3
+            // when js is enabled it appears collapsed, to save space
+            // when js is enabled, the multimedia content is Ajaxed in when the block is expanded for the first time
+        },
+
+    };
+
+    ct_pattern.collapse_expandable_containers();
+    ct_pattern.setup_expand_buttons('.m-tree--expander'); // [role="tree-item"][aria-expanded] > div > a
+
+})(jQuery);
